@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Đánh Giá Sản Phẩm - Cửa Hàng Thời Trang</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Thời Trang</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Tin Tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Giỏ Hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="track-order.html">Theo Dõi Đơn Hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review.html">Đánh Giá Sản Phẩm</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Đánh Giá Sản Phẩm</h1>
+        <form id="review-form">
+            <div class="form-group">
+                <label for="product-name">Tên Sản Phẩm</label>
+                <input type="text" class="form-control" id="product-name" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Đánh Giá (1-5)</label>
+                <input type="number" class="form-control" id="rating" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="comment">Nhận Xét</label>
+                <textarea class="form-control" id="comment" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Gửi Đánh Giá</button>
+        </form>
+        <div id="review-status" class="mt-4"></div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Thông tin liên hệ: email@example.com</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        document.getElementById('review-form').addEventListener('submit', (event) => {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của form
+
+            const productName = document.getElementById('product-name').value.trim();
+            const rating = document.getElementById('rating').value;
+            const comment = document.getElementById('comment').value.trim();
+
+            // Gửi đánh giá đến API
+            const reviewData = {
+                productName,
+                rating,
+                comment
+            };
+
+            fetch('https://your-api-endpoint.com/submit-review', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(reviewData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const reviewStatusDiv = document.getElementById('review-status');
+                    if (data.success) {
+                        reviewStatusDiv.innerHTML = '<h5 class="text-success">Cảm ơn bạn! Đánh giá của bạn đã được gửi thành công.</h5>';
+                        document.getElementById('review-form').reset(); // Reset form } else {
+                        reviewStatusDiv.innerHTML = '<h5 class="text-danger">Đã xảy ra lỗi khi gửi đánh giá. Vui lòng thử lại.</h5>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Đã xảy ra lỗi trong quá trình gửi đánh giá. Vui lòng thử lại.');
+                });
+        });
+    </script>
+</body>
+
+</html>
+<div class="container mt-4">
+    <h1 class="text-center">Sản Phẩm</h1>
+    <div class="row">
+        <!-- Mẫu cho sản phẩm -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="images/product1.jpg" alt="Sản phẩm 1" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title">Sản phẩm 1</h5>
+                    <p class="card-text">Mô tả ngắn về sản phẩm 1.</p>
+                    <p>Giá: 100.000 VNĐ</p>
+                    <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 1" data-product-price="100000">Thêm vào giỏ hàng</button>
+                    <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Đánh Giá Sản Phẩm</h2>
+    <div id="reviews" class="mt-4">
+        <!-- Các đánh giá sẽ được hiển thị ở đây -->
+    </div>
+</div>
+
+<script>
+    // JavaScript để hiển thị đánh giá sản phẩm
+    document.addEventListener('DOMContentLoaded', () => {
+        const productName = 'Sản phẩm 1'; // Thay đổi theo sản phẩm hiện tại
+        fetch(`https://your-api-endpoint.com/get-reviews/${productName}`)
+            .then(response => response.json())
+            .then(data => {
+                const reviewsContainer = document.getElementById('reviews');
+                if (data.reviews.length === 0) {
+                    reviewsContainer.innerHTML = '<p class="text-center">Chưa có đánh giá nào cho sản phẩm này.</p>';
+                } else {
+                    data.reviews.forEach(review => {
+                        const reviewDiv = document.createElement('div');
+                        reviewDiv.className = 'review';
+                        reviewDiv.innerHTML = `
+                            <h5>${review.rating} sao</h5>
+                            <p>${review.comment}</p>
+                            <small>Đánh giá bởi: ${review.user}</small>
+                        `;
+                        reviewsContainer.appendChild(reviewDiv);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Đã xảy ra lỗi trong quá trình tải đánh giá. Vui lòng thử lại.');
+            });
+    });
+</script>
+<div class="container mt-4">
+    <h1 class="text-center">Cửa Hàng Thời Trang</h1>
+    <input type="text" id="search-input" class="form-control" placeholder="Tìm kiếm sản phẩm...">
+    <div id="product-list" class="row mt-4">
+        <!-- Danh sách sản phẩm sẽ được hiển thị ở đây -->
+    </div>
+</div>
+
+<script>
+    document.getElementById('search-input').addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        const products = document.querySelectorAll('.product'); // Giả sử mỗi sản phẩm có class 'product'
+
+        products.forEach(product => {
+            const productName = product.querySelector('.card-title').textContent.toLowerCase();
+            if (productName.includes(query)) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+</script>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="footer-title">Liên Kết</h5>
+                <ul class="footer-links">
+                    <li>
+                        <a href="index.html">
+                            <img src="/IMG/logo/png-clipart-logo-house-home-house-angle-building-thumbnail.png" alt="Home" class="footer-icon"> Trang Chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="products.html">
+                            <img src="/IMG/logo/istockphoto-1184670036-612x612.jpg" alt="Products" class="footer-icon"> Sản Phẩm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="news.html">
+                            <img src="/IMG/logo/pngtree-vector-news-icon-button-news-logo-vector-png-image_13830380.png" alt="News" class="footer-icon"> Tin Tức
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html">
+                            <img src="/IMG/logo/90871138f577a550e0d76dc4c5a1d7df.jpg" alt="Cart" class="footer-icon"> Giỏ Hàng
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="footer-title">Thông Tin</h5>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#">
+                            <img src="/IMG/logo/co-tron-tay-ngan.png" alt="About" class="footer-icon"> Giới Thiệu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Mission" class="footer-icon"> Tầm Nhìn và Sứ Mệnh
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Benefits" class="footer-icon"> Lợi Ích Khi Mua Sắm Tại Cửa Hàng
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="footer-title">Mạng Xã Hội</h5>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="/IMG/logo/images.png" alt="Facebook" class="footer-icon"> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="/IMG/logo/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" alt="Instagram" class="footer-icon"> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="/IMG/logo/images (1).png" alt="Twitter" class="footer-icon"> Twitter
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Google Map Section -->
+        <div class="row">
+            <div class="col-md-12">
+                <h5 class="footer-title">Địa Chỉ Cửa Hàng</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.145423307556!2d106.62941141531356!3d10.776751462325732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c8c2d7f0a5d%3A0x2c1c1c1c1c1c1c1c!2sYour%20Store%20Name!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <p class="text-center">Copyright 2023 THỜ TRANG THỂ THAO RUNAWAY. All rights reserved.</p>
+    </div>
+</footer>
+
+<style>
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-links li {
+        margin: 10px 0;
+    }
+    
+    .footer-icon {
+        width: 20px;
+        height: auto;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+</style>
+
+<script>
+    function showContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh uf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html> ```html
+<!-- Google Map Section -->
+<div class="row">
+    <div class="col-md-12">
+        <h5 class="footer-title">Địa Chỉ Cửa Hàng</h5>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.145423307556!2d106.62941141531356!3d10.776751462325732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c8c2d7f0a5d%3A0x2c1c1c1c1c1c1c1c!2sYour%20Store%20Name!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+<p class="text-center">Copyright 2023 THỜI TRANG THỂ THAO RUNAWAY. All rights reserved.</p>
+</div>
+</footer>
+
+<style>
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-links li {
+        margin: 10px 0;
+    }
+    
+    .footer-icon {
+        width: 20px;
+        height: auto;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+</style>
+
+<script>
+    function showContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh uf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

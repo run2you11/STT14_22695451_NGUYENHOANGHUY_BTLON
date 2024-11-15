@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>CỬA HÀNG QUẦN ÁO THỂ THAO - GIỚI THIỆU</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .hero {
+            background-image: url('../IMG/background/40ebc853-a029-4644-b436-2a865deedf37__1991X760.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: backgroundMove 30s linear infinite;
+            /* Hiệu ứng nền di chuyển */
+        }
+        
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+            /* Hiệu ứng chuyển động cho ảnh */
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+            /* Phóng to ảnh khi di chuột qua */
+        }
+        
+        .product-section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 50px 0;
+        }
+        
+        .news-section {
+            background-color: rgba(240, 240, 240, 0.9);
+            padding: 50px 0;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            /* Điều chỉnh chiều cao của logo */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="/IMG/logo/90871138f577a550e0d76dc4c5a1d7df.jpg" alt="Logo Cửa Hàng Thể Thao">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">TRANG CHỦ </a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">SẢN PHẨM </a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">TIN TỨC</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">GIỎ HÀNG </a></li>
+                    <li class="nav-item"><a class="nav-link" href="resign.html">ĐĂNG KÝ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="checkout.html">THANH TOÁN </a></li>
+                    <li class="nav-item"><a class="nav-link" href="product-detail.html">CHI TIẾT SẢN PHẨM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">GIỚI THIỆU </a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>WELCOME TO RUNAWAY SPORT WEAR </h1>
+        <p>CÙNG KHÁM PHÁ BỘ SƯU TẬP MỚI NHẤT CỦA NGUYỄN HOÀNG HUY NHÉ!</p>
+        <a href="products.html" class="btn btn-light">Xem Sản Phẩm</a>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#infoModal">
+            <a href="about.html" class="btn btn-light">Thông Tin  </a>
+        </button>
+    </div>
+
+    <!-- Product Section -->
+    <div class="container product-section mt-5">
+        <h2 class="text-center">Sản Phẩm Nổi Bật</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="/IMG/nam/Men's Philadelphia Eagles Custom Game Jersey/00(1).jpg" class="card-img-top" alt=" Áo Thể Thao">
+                    <div class="card-body">
+                        <h5 class="card-title">Áo Thể Thao Nam</h5>
+                        <p class="card-text">Mô tả ngắn gọn về áo thể thao nam.</p>
+                        <a href="products.html" class="btn btn-primary">Xem Chi Ti ết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="/IMG/nam/Others/2111(1).jpg" class="card-img-top" alt="Quần Thể Thao">
+                    <div class="card-body">
+                        <h5 class="card-title">Quần Thể Thao Nữ</h5>
+                        <p class="card-text">Mô tả ngắn gọn về quần thể thao nữ.</p>
+                        <a href="products.html" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="/IMG/nam/Others/s92(1).jpg" class="card-img-top" alt="Áo Custom">
+                    <div class="card-body">
+                        <h5 class="card-title"> Áo Custom </h5>
+                        <p class="card-text">Mô tả ngắn gọn về áo custom.</p>
+                        <a href="products.html" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm các sản phẩm khác vào đây -->
+
+        </div>
+    </div>
+
+    <!-- News Section -->
+    <div class="container news-section mt-5">
+        <h2 class="text-center">Tin Nổi Bật</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="/IMG/tin tuc/tim-hieu-y-nghia-logo-ao-barca.jpg" class="card-img-top" alt="Tin Nổi Bật 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Giải Mã Ý Nghĩa Logo Áo Barcelona Qua Các Thời Kỳ</h5>
+                        <p class="card-text">Barcelona là một trong những câu lạc bộ nổi tiếng thế giới và đã đặt dấu ấn mạnh mẽ trong việc thiết kế và sản xuất các phụ kiện thể thao. Qua nhiều thời kỳ, Barcelona đã thay đổi nhiều phiên bản logo. Tuy nhiên, mỗi phiên bản
+                            đều hướng đến giá trị cốt lõi […]</p>
+                        <a href="news.html" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="/IMG/tin tuc/doi-hinh-duc-mua-giai-24-25-voi-dan-sao-tre.jpg" class="card-img-top" alt="Tin Nổi Bật 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Đội Hình Đức 2024 2025 Và Số Áo Các Ngôi Sao Trẻ Đầy Tiề m Năng</h5>
+                        <p class="card-text">Đội tuyển Đức luôn là một trong những cái tên được người hâm mộ bóng đá thế giới quan tâm nhờ vào lối chơi khoa học và sở hữu nhiều cầu thủ đẳng cấp. Trong mùa giải 2024/2025, đội tuyển Đức không chỉ mang đến một đội hình mạnh
+                            mẽ, mà còn là sự kết […]</p>
+                        <a href="news.html" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="/IMG/tin tuc/doi-hinh-bong-da-real-madrid-24-25.jpg" class="card-img-top" alt="Tin Nổi Bật 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Đội Hình Real 2024/25: Thông Tin Về Đội Hình, Số Áo Và Áo Đấu Mới Của Real Madrid</h5>
+                        <p class="card-text">Sự điều chỉnh đội hình Real 2024/25 đã thu hút sự chú ý của đông đảo tín đồ bóng đá và giới chuyên môn. Những cái tên mới đã xuất hiện ở cả hàng tiền đạo, tiền vệ và hậu vệ hứa hẹn sẽ giúp “Kền kền trắng” làm nên chuyện trong mùa
+                            giải mới […]</p>
+                        <a href="news.html" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm các tin nổi bật khác vào đây -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Thông Tin</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Nội dung thông tin sẽ được hiển thị ở đây -->
+                    <p>Thông tin về cửa hàng thể thao...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+<!-- Contact Section -->
+<div class="container section">
+    <h2 class="text-center section-title">Liên Hệ</h2>
+    <p class="text-center">Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với chúng tôi qua địa chỉ email hoặc số điện thoại dưới đây.</p>
+    <p class="text-center">Email: [run2you11@gmail.com]( run2you11@example.com)</p>
+    <p class="text-center">Số Điện Thoại: 0123456789</p>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="footer-title">Liên Kết</h5>
+                <ul class="footer-links">
+                    <li>
+                        <a href="index.html">
+                            <img src="/IMG/logo/png-clipart-logo-house-home-house-angle-building-thumbnail.png" alt="Home" class="footer-icon"> Trang Chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="products.html">
+                            <img src="/IMG/logo/istockphoto-1184670036-612x612.jpg" alt="Products" class="footer-icon"> Sản Phẩm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="news.html">
+                            <img src="/IMG/logo/pngtree-vector-news-icon-button-news-logo-vector-png-image_13830380.png" alt="News" class="footer-icon"> Tin Tức
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html">
+                            <img src="/IMG/logo/90871138f577a550e0d76dc4c5a1d7df.jpg" alt="Cart" class="footer-icon"> Giỏ Hàng
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="footer-title">Thông Tin</h5>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#">
+                            <img src="/IMG/logo/co-tron-tay-ngan.png" alt="About" class="footer-icon"> Giới Thiệu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Mission" class="footer-icon"> Tầm Nhìn và Sứ Mệnh
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Benefits" class="footer-icon"> Lợi Ích Khi Mua Sắm Tại Cửa Hàng
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="footer-title">Mạng Xã Hội</h5>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="/IMG/logo/images.png" alt="Facebook" class="footer-icon"> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="/IMG/logo/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" alt="Instagram" class="footer-icon"> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="/IMG/logo/images (1).png" alt="Twitter" class="footer-icon"> Twitter
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Google Map Section -->
+        <div class="row">
+            <div class="col-md-12">
+                <h5 class="footer-title">Địa Chỉ Cửa Hàng: 12 Nguyễn Văn Bảo, Phường 04, Quận Gò Vấp , Thành phố Hồ Chí Minh , Việt Nam</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.145423307556!2d106.62941141531356!3d10.776751462325732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c8c2d7f0a5d%3A0x2c1c1c1c1c1c1c1c!2sYour%20Store%20Name!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <p class="text-center">Copyright NGUYỄN HOÀNG HUY 22695451 THỜI TRANG THỂ THAO RUNAWAY.</p>
+    </div>
+</footer>
+
+<style>
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-links li {
+        margin: 10px 0;
+    }
+    
+    .footer-icon {
+        width: 20px;
+        height: auto;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+</style>
+
+<script>
+    function showContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh uf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

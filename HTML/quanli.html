@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Quản Lý Đơn Hàng - Cửa Hàng Thời Trang</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Thời Trang</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manage-orders.html">Quản Lý Đơn Hàng</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Quản Lý Đơn Hàng</h1>
+        <div id="order-list" class="mt-4">
+            <!-- Danh sách đơn hàng sẽ được hiển thị ở đây -->
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Thông tin liên hệ: email@example.com</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('https://your-api-endpoint.com/get-orders')
+                .then(response => response.json())
+                .then(data => {
+                    const orderList = document.getElementById('order-list');
+                    if (data.orders.length === 0) {
+                        orderList.innerHTML = '<p class="text-center">Chưa có đơn hàng nào.</p>';
+                    } else {
+                        data.orders.forEach(order => {
+                            const orderDiv = document.createElement('div');
+                            orderDiv.className = 'order';
+                            orderDiv.innerHTML = `
+                                <h5>Mã Đơn Hàng: ${order.id}</h5>
+                                <p>Tên Khách Hàng: ${order.customerName}</p>
+                                <p>Địa Chỉ: ${order.address}</p>
+                                <p>Trạng Thái: ${order.status}</p>
+                                <hr>
+                            `;
+                            orderList.appendChild(orderDiv);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Đã xảy ra lỗi trong quá trình tải đơn hàng. Vui lòng thử lại.');
+                });
+        });
+    </script>
+</body>
+
+</html>
+<div id="notification" class="alert alert-info" style="display: none;"></div>
+<!-- Thêm mã theo dõi Google Analytics vào phần <head> -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'YOUR_TRACKING_ID');
+</script>
+<title>Cửa Hàng Thời Trang - Mua Sắm Sản Phẩm Chất Lượng</title>
+<meta name="description" content="Khám phá bộ sưu tập thời trang mới nhất với giá cả phải chăng."><a href="/products/san-pham-1">Sản phẩm 1</a>
+<h1>Sản Phẩm Mới Nhất</h1>
+<h2>Top Sản Phẩm Bán Chạy</h2><img src="images/product1.jpg" alt="Sản phẩm 1 - Áo thun nam" />

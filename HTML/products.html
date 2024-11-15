@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Sản Phẩm - Cửa Hàng Thời Trang</title>
+    <style>
+        /* CSS for image hover effect */
+        
+        .card-img-top {
+            transition: transform 0.3s ease;
+            /* Smooth transition for the transform property */
+        }
+        
+        .card-img-top:hover {
+            transform: scale(1.1);
+            /* Scale image to 110% on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Thời Trang</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Tin Tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Giỏ Hàng</a></li>
+                </ul>
+                <!-- Thêm ô tìm kiếm -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="search-input" placeholder="Tìm sản phẩm" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="search-button">Tìm</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Sản Phẩm</h1>
+        <div class="row" id="product-list">
+            <!-- Mẫu cho sản phẩm -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao 1/a.jpg" alt="Sản phẩm 1" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Cổ Vũ Cho Dallas Cowboys Với Áo Đấu Limited Edition!</h5>
+                        <p class="card-text">Cổ vũ Dallas Cowboys với thiết kế thoải mái và hiện đại.</p>
+                        <p>Giá: 100.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 1" data-product-price="100000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nu/SAINTS done/Others/411(1).jpg" alt="Sản phẩm 2" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Phong Cách Độc Đáo Cùng Philadelphia Eagles!</h5>
+                        <p class="card-text">Phong cách vượt trội cùng Philadelphia Eagles, lựa chọn hoàn hảo cho fan</p>
+                        <p>Giá: 200.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 2" data-product-price="200000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 3 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nu/BUCCANEERS done/custom/0(1).jpg" alt="Sản phẩm 3" class="card-img-top img-fluid">
+                    <div class ```html <div class="card-body">
+                        <h5 class="card-title">Đồng Hành Cùng Green Bay Packers Với Áo Đấu Chính Hãng!</h5>
+                        <p class="card-text">Diện áo đấu Green Bay Packers và thể hiện niềm đam mê bất tận!</p>
+                        <p>Giá: 150.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 3" data-product-price="150000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 4 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nu/SAINTS done/Others/Ssaints41(1).jpg" alt="Sản phẩm 4" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Thể Hiện Tinh Thần San Francisco 49ers Với Áo Đấu Đẳng Cấp!</h5>
+                        <p class="card-text">Sở hữu vẻ ngoài đẳng cấp với áo đấu San Francisco 49ers.</p>
+                        <p>Giá: 120.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 4" data-product-price="120000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 5 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nu/SAINTS done/Men's New Orleans Saints Custom Game Jersey/00(1).jpg" alt="Sản phẩm 5" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Tự Hào Mặc Áo Đấu Của Minnesota Vikings!</h5>
+                        <p class="card-text">Fan Minnesota Vikings không thể bỏ qua thiết kế độc quyền này!</p>
+                        <p>Giá: 180.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 5" data-product-price="180000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 6 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao 1/c.jpg" alt="Sản phẩm 6" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Áo Đấu Tampa Bay Buccaneers Phiên Bản Đặc Biệt!</h5>
+                        <p class="card-text">Áo đấu Tampa Bay Buccaneers bền đẹp, luôn sẵn sàng cho các trận đấu.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 6" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 7 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao 1/b.jpg" alt="Sản phẩm 7" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Ủng Hộ New Orleans Saints Với Áo Đấu Limited!</h5>
+                        <p class="card-text">Đồng hành cùng New Orleans Saints với phong cách nổi bật.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 7" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 8 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/Others/ss1(1).jpg" alt="Sản phẩm 8" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Nổi Bật Cùng Los Angeles Rams Với Áo Đấu Đầy Phong Cách!</h5>
+                        <p class="card-text">Hòa nhịp cùng Los Angeles Rams với áo đấu tinh tế và thoải mái.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 8" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 9 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao11/z5911339791540_2ffba3b1ee7720bf6985993159284aa4.jpg" alt="Sản phẩm 9" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Tinh Thần Atlanta Falcons Với Áo Đấu Chính Hãng!</h5>
+                        <p class="card-text">Tinh thần Atlanta Falcons trong thiết kế hoàn hảo dành cho fan.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 9" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 10 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao11/z5911341073307_24879250e593fcce1afdc3697bf24778.jpg" alt="Sản phẩm 10" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Áo Đấu Detroit Lions Thời Thượng Và Tinh Tế!</h5>
+                        <p class="card-text">Áo đấu Detroit Lions, đẳng cấp cho mọi dịp.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 10" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 11 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/1/z5911363980701_eddc67b6e74d5954a506c1e3caa66fb3.jpg" alt="Sản phẩm 11" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Khám Phá Áo Đấu Đầy Phong Cách Của Carolina Panthers!</h5>
+                        <p class="card-text">Sẵn sàng cổ vũ Carolina Panthers với áo đấu chính hãng.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 11" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 12 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/1/z5911369522500_434d109c6126ce3e8843d2f42b02e8f0.jpg" alt="Sản phẩm 12" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Sự Lựa Chọn Đẳng Cấp Cho Fan Arizona Cardinals!</h5>
+                        <p class="card-text">Phong cách độc đáo cho fan Arizona Cardinals.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 12" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 13 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/a04/4(1).jpg" alt="Sản phẩm 13" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Đồng Hành Cùng Chicago Bears Với Áo Đấu Chính Thức!</h5>
+                        <p class="card-text">Diện áo đấu Chicago Bears, thể hiện tình yêu đội nhà.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 13" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 14 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/a04/s4(1).jpg" alt="Sản phẩm 14" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Áo Đấu New York Giants Tinh Tế Cho Fan Đích Thực!</h5>
+                        <p class="card-text">Phong cách đích thực cùng áo đấu New York Giants.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 14" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 15 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/a04/z5911093011570_1bf81f55dcefb98f9e6016d77f1866b6.jpg" alt="Sản phẩm 15" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Ủng Hộ Washington Commanders Với Áo Đấu Độc Đáo!</h5>
+                        <p class="card-text">Tinh thần Washington Commanders với áo đấu tuyệt vời.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 15" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 16 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao10/z5911100386876_04bda9e7805cb6cc5110aaf360dc3ae6.jpg" alt="Sản phẩm 16" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Áo Đấu Seattle Seahawks Đậm Chất Cổ Vũ!</h5>
+                        <p class="card-text">Fan Seattle Seahawks chắc chắn sẽ yêu thích thiết kế này!</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 16" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 17 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao10/z5911101666717_42b9e3158c65cbab34c1935f44aab3b7.jpg" alt="Sản phẩm 17" class="card-img-top img-fluid">
+                    <div class="card-body ```html
+                        <h5 class=" card-title ">Fan Cứng Dallas Cowboys Không Thể Bỏ Qua Áo Đấu Này!</h5>
+                        <p class="card-text ">Chất Dallas Cowboys hiện đại và thoải mái cho mọi tình huống.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 17 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 18 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao5/CB5.png " alt="Sản phẩm 18 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Áo Đấu San Francisco 49ers Độc Đáo Cho Fan Hâm Mộ!</h5>
+                        <p class="card-text ">Phong cách San Francisco 49ers với áo đấu độc quyền.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 18 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 19 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao5/z5911220313753_a944d1342b091463b22e5439410b0296.jpg " alt="Sản phẩm 19 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Phong Cách Green Bay Packers Với Áo Đấu Limited Edition!</h5>
+                        <p class="card-text ">Green Bay Packers tinh tế trong từng đường nét.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 19 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 20 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao2/s1(1).jpg " alt="Sản phẩm 20 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Trung Thành Với New Orleans Saints Cùng Áo Đấu Chính Hãng!</h5>
+                        <p class="card-text ">Diện áo đấu New Orleans Saints cho những khoảnh khắc tuyệt vời.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 20 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 21 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao9/z5911388877533_7ffdfdc7f117b1b74dd21aea0b49863a.jpg " alt="Sản phẩm 21 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Áo Đấu Philadelphia Eagles Phiên Bản Đặc Biệt Cho Fan!</h5>
+                        <p class="card-text ">Áo đấu Philadelphia Eagles thiết kế độc đáo dành riêng cho fan.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 21 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 22 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class ```html
+                <div class="card ">
+                    <img src="/IMG/nam/ao8/z5911207923284_d2564637d2a2af7e0a46dd9f08a84bd4.jpg " alt="Sản phẩm 22 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Áo Đấu Los Angeles Rams Đẳng Cấp, Đậm Chất Thời Trang!</h5>
+                        <p class="card-text ">Phong cách Los Angeles Rams, nổi bật trong từng chi tiết.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 22 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 23 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao7/7(1).jpg " alt="Sản phẩm 23 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Tinh Thần Chiến Thắng Cùng Carolina Panthers!</h5>
+                        <p class="card-text ">Trọn vẹn tinh thần Carolina Panthers trong thiết kế tinh tế.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 23 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 24 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao8/z5911210904240_2729b4589978fa14d6797e18545a452a.jpg " alt="Sản phẩm 24 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Áo Đấu Tampa Bay Buccaneers Phong Cách Cho Fan!</h5>
+                        <p class="card-text ">Áo đấu Tampa Bay Buccaneers bền bỉ và phong cách.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 24 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 25 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao8/z5911213030187_2eae05eb842e80d7f111eab306f1f9ea.jpg " alt="Sản phẩm 25 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Tỏa Sáng Cùng Minnesota Vikings Với Áo Đấu Chính Hãng!</h5>
+                        <p class="card-text ">Tỏa sáng cùng áo đấu Minnesota Vikings, tinh tế và hiện đại.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 25 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 26 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao9/z5911389886871_584d10c9a669f91cfb589dc70dee9b21.jpg " alt="Sản phẩm 26 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Phong Cách Atlanta Falcons Đậm Chất Thời Trang!</h5>
+                        <p class="card-text ">Phong cách Atlanta Falcons cho fan chính hiệu.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class ```html
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 26 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 27 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao55/z5911374425993_c0915ca990b44939145ae1b8197be4bd.jpg " alt="Sản phẩm 27 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Thể Hiện Tinh Thần Chicago Bears Với Áo Đấu Độc Quyền!</h5>
+                        <p class="card-text ">Chicago Bears và thiết kế nổi bật cho mọi trận đấu.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 27 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 28 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao2/s1(1).jpg " alt="Sản phẩm 28 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Áo Đấu Detroit Lions Chính Hãng Và Đẳng Cấp!</h5>
+                        <p class="card-text ">Đẳng cấp Detroit Lions, luôn sẵn sàng mọi lúc, mọi nơi.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 28 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 29 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao19/z5911238129086_2b9252eb75cfd57ade6041949d018a7b.jpg " alt="Sản phẩm 29 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Sẵn Sàng Với Áo Đấu Của Arizona Cardinals!</h5>
+                        <p class="card-text ">Áo đấu Arizona Cardinals phong cách và bền đẹp.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 29 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 30 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao15/z5911113456462_56f47210c9799053104b128db2e388a9.jpg " alt="Sản phẩm 30 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Fan Hâm Mộ New York Giants Không Thể Thiếu Áo Đấu Này!</h5>
+                        <p class="card-text ">Cổ vũ New York Giants với sự thoải mái tối đa.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 30 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 31 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao14/Untitled-7(1).jpg " alt="Sản phẩm 31 " class="card-img ```html -top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Phong Cách Cổ Vũ Washington Commanders Chính Hiệu!</h5>
+                        <p class="card-text ">Áo đấu Washington Commanders, lựa chọn hoàn hảo cho ngày thi đấu.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 31 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 32 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao17/z5911323169988_11a331222c335d2cd27cf78d6cb6db53.jpg " alt="Sản phẩm 32 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Áo Đấu Seattle Seahawks Được Yêu Thích Nhất!</h5>
+                        <p class="card-text ">Tinh thần Seattle Seahawks trong thiết kế thoải mái, bền đẹp.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 32 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 33 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao14/z5911309286226_82c190c21b8add8ab195900493f629be.jpg " alt="Sản phẩm 33 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Đồng Hành Cùng Dallas Cowboys Với Áo Đấu Đầy Phong Cách!</h5>
+                        <p class="card-text ">Phong cách Dallas Cowboys sẵn sàng cho mọi trận đấu.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 33 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 34 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao17/z5911324117282_0d77f58b0d996f97aa3dbe8f16be2533.jpg " alt="Sản phẩm 34 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Phong Cách Độc Đáo Của Green Bay Packers!</h5>
+                        <p class="card-text ">Áo đấu Green Bay Packers dành riêng cho fan trung thành.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 34 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 35 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao16/z5911106042098_af65d7056292819c80ee1ae94748b0e9.jpg " alt="Sản phẩm 35 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Tự Hào Mặc Áo Đấu San Francisco 49ers Đẳng Cấp!</h5>
+                        <p class="card-text ">Thể hiện tinh thần San Francisco 49ers với thiết kế vượt trội.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 35 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail .html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 36 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao15/z5911113456462_56f47210c9799053104b128db2e388a9.jpg " alt="Sản phẩm 36 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Áo Đấu Philadelphia Eagles Chính Hãng Cho Fan!</h5>
+                        <p class="card-text ">Phong cách Philadelphia Eagles, tự tin trong từng chi tiết.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 36 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 37 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao7/z5911068925768_aee1b1e78b85e9bcc00247f32d4153b7.jpg " alt="Sản phẩm 37 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Phong Cách Thời Thượng Của Los Angeles Rams!</h5>
+                        <p class="card-text ">Áo đấu Los Angeles Rams bền đẹp, phù hợp mọi dịp.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 37 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 38 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao13/z5911228948938_f9756cbf0b3915ff7f6bdc20acdf4c7a.jpg " alt="Sản phẩm 38 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Độc Đáo Với Áo Đấu Carolina Panthers!</h5>
+                        <p class="card-text ">Carolina Panthers tinh tế với chất liệu cao cấp.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 38 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 39 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao11/z5911342597823_de874d853cee1f10d2634feeb4011670.jpg " alt="Sản phẩm 39 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Áo Đấu Tampa Bay Buccaneers Đáng Sở Hữu!</h5>
+                        <p class="card-text ">Tampa Bay Buccaneers cho fan đích thực, luôn bền đẹp.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart " data-product-name="Sản phẩm 39 " data-product-price="140000 ">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html " class="btn btn-secondary ">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 40 -->
+            <div class="col-md-4 mb-4 product-item ">
+                <div class="card ">
+                    <img src="/IMG/nam/ao17/z5911324117282_0d77f58b0d996f97aa3dbe8f16be2533.jpg " alt="Sản phẩm 40 " class="card-img-top img-fluid ">
+                    <div class="card-body ">
+                        <h5 class="card-title ```html <h5 class="card-title">Fan Đích Thực Của New Orleans Saints Không Thể Thiếu!</h5>
+                        <p class="card-text">Phong cách mạnh mẽ cho fan trung thành của New Orleans Saints.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 40" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 41 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/Others/1777(1).jpg" alt="Sản phẩm 41" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Tỏa Sáng Với Áo Đấu Minnesota Vikings Đầy Tự Hào!</h5>
+                        <p class="card-text">Minnesota Vikings, lựa chọn lý tưởng cho mọi fan đam mê.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 41" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 42 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/Others/288(1).jpg" alt="Sản phẩm 42" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Áo Đấu Atlanta Falcons Thời Thượng Và Độc Quyền!</h5>
+                        <p class="card-text">Phong cách đậm chất Atlanta Falcons, sẵn sàng tỏa sáng.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 42" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 43 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/Others/56(1).jpg" alt="Sản phẩm 43" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Tinh Thần Chicago Bears Đậm Chất Cổ Vũ!</h5>
+                        <p class="card-text">Tinh thần Chicago Bears thể hiện rõ qua từng đường nét.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 43" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 44 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao 1/c.jpg" alt="Sản phẩm 44" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Áo Đấu Detroit Lions Chính Hãng, Đẳng Cấp!</h5>
+                        <p class="card-text">Áo đấu Detroit Lions cho ngày cổ vũ thêm phần tuyệt vời.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 44" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 45 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao19/z5911238980994_2bdba89dcbd339d082ff108bdd1cafa6.jpg" alt="Sản phẩm 45" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Phong Cách Arizona Cardinals Cho Fan Yêu Thích!</h5>
+                        <p class="card-text">Phong cách Arizona Cardinals, nổi bật và thoải mái.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 45" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 46 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao13/z5911228948938_f9756cbf0b3915ff7f6bdc20acdf4c7a.jpg" alt="Sản phẩm 46" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Áo Đấu New York Giants Độc Đáo Và Sành Điệu!</h5>
+                        <p class="card-text">Áo đấu New York Giants cho fan chính hiệu.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 46" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 47 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/a04/z5911093011570_1bf81f55dcefb98f9e6016d77f1866b6.jpg" alt="Sản phẩm 47" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Phong Cách Washington Commanders Được Ưa Chuộng!</h5>
+                        <p class="card-text">Tinh thần Washington Commanders, đẳng cấp mọi lúc, mọi nơi.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 47" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 48 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao2/z5911319432693_976a0f9a8be4a40a1d3cec7fd49266d7.jpg" alt="Sản phẩm 48" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Tinh Thần Seattle Seahawks Cho Fan Chính Hiệu!</h5>
+                        <p class="card-text">Seattle Seahawks sẵn sàng đồng hành với fan hâm mộ.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 48" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 49 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao12/z5911382653571_ab60f8e7b08e1055be28183ea825fd8a.jpg" alt="Sản phẩm 49" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Áo Đấu Dallas Cowboys Đẳng Cấp Và Thời Thượng!</h5>
+                        <p class="card-text">Thiết kế Dallas Cowboys thời thượng, phù hợp mọi dịp.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 49" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+                ```html
+            </div>
+
+            <!-- Sản phẩm 50 -->
+            <div class="col-md-4 mb-4 product-item">
+                <div class="card">
+                    <img src="/IMG/nam/ao14/z5911309286226_82c190c21b8add8ab195900493f629be.jpg" alt="Sản phẩm 50" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Phong Cách Cổ Vũ Philadelphia Eagles Chính Hãng!</h5>
+                        <p class="card-text">Phong cách Philadelphia Eagles tinh tế và hiện đại.</p>
+                        <p>Giá: 140.000 VNĐ</p>
+                        <button class="btn btn-primary add-to-cart" data-product-name="Sản phẩm 50" data-product-price="140000">Thêm vào giỏ hàng</button>
+                        <a href="product-detail.html" class="btn btn-secondary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Thông tin liên hệ: email@example.com</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        // JavaScript để xử lý thêm sản phẩm vào giỏ hàng
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-product-name');
+                const productPrice = button.getAttribute('data-product-price');
+
+                // Lấy giỏ hàng từ localStorage hoặc khởi tạo một mảng mới
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                // Thêm sản phẩm vào giỏ hàng
+                cart.push({
+                    name: productName,
+                    price: productPrice
+                });
+
+                // Lưu giỏ hàng vào localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                alert(`${productName} đã được thêm vào giỏ hàng.`);
+            });
+        });
+
+        // JavaScript để xử lý tìm kiếm sản phẩm
+        const searchButton = document.getElementById('search-button');
+        const searchInput = document.getElementById('search-input');
+
+        searchButton.addEventListener('click', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const productItems = document.querySelectorAll('.product-item');
+
+            productItems.forEach(item => {
+                const productName = item.querySelector('.card-title').textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    item.style.display = 'block'; // Hiển thị sản phẩm nếu tìm thấy
+                } else {
+                    item.style.display = 'none'; // Ẩn sản phẩm nếu không tìm thấy
+                }
+            });
+        });
+    </script>
+
+</html>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="footer-title">Liên Kết</h5>
+                <ul class="footer-links">
+                    <li>
+                        <a href="index.html">
+                            <img src="/IMG/logo/png-clipart-logo-house-home-house-angle-building-thumbnail.png" alt="Home" class="footer-icon"> Trang Chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="products.html">
+                            <img src="/IMG/logo/istockphoto-1184670036-612x612.jpg" alt="Products" class="footer-icon"> Sản Phẩm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="news.html">
+                            <img src="/IMG/logo/pngtree-vector-news-icon-button-news-logo-vector-png-image_13830380.png" alt="News" class="footer-icon"> Tin Tức
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html">
+                            <img src="/IMG/logo/90871138f577a550e0d76dc4c5a1d7df.jpg" alt="Cart" class="footer-icon"> Giỏ Hàng
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="footer-title">Thông Tin</h5>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#">
+                            <img src="/IMG/logo/co-tron-tay-ngan.png" alt="About" class="footer-icon"> Giới Thiệu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Mission" class="footer-icon"> Tầm Nhìn và Sứ Mệnh
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Benefits" class="footer-icon"> Lợi Ích Khi Mua Sắm Tại Cửa Hàng
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="footer-title">Mạng Xã Hội</h5>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="/IMG/logo/images.png" alt="Facebook" class="footer-icon"> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="/IMG/logo/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" alt="Instagram" class="footer-icon"> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="/IMG/logo/images (1).png" alt="Twitter" class="footer-icon"> Twitter
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Google Map Section -->
+        <div class="row">
+            <div class="col-md-12">
+                <h5 class="footer-title">Địa Chỉ Cửa Hàng: 12 Nguyễn Văn Bảo, Phường 04, Quận Gò Vấp , Thành phố Hồ Chí Minh , Việt Nam</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.145423307556!2d106.62941141531356!3d10.776751462325732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c8c2d7f0a5d%3A0x2c1c1c1c1c1c1c1c!2sYour%20Store%20Name!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <p class="text-center">Copyright NGUYỄN HOÀNG HUY 22695451 THỜI TRANG THỂ THAO RUNAWAY.</p>
+    </div>
+</footer>
+
+<style>
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-links li {
+        margin: 10px 0;
+    }
+    
+    .footer-icon {
+        width: 20px;
+        height: auto;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+</style>
+
+<script>
+    function showContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh uf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

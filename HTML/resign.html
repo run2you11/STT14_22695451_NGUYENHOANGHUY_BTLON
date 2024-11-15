@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Đăng Ký - Cửa Hàng Thời Trang</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Thời Trang</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Tin Tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Giỏ Hàng</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Đăng Ký Thành Viên</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Tên</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Xác nhận mật khẩu</label>
+                <input type="password" id="confirm-password" class="form-control" required>
+            </div>
+            <div id="error-message" class="text-danger mb-3" style="display: none;"></div>
+            <button type="submit" class="btn btn-primary" onclick="return validateForm()">Đăng Ký</button>
+        </form>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Thông tin liên hệ: email@example.com</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            var errorMessage = document.getElementById("error-message");
+
+            if (password !== confirmPassword) {
+                errorMessage.style.display = "block";
+                errorMessage.innerText = "Mật khẩu và xác nhận mật khẩu không khớp.";
+                return false;
+            }
+            errorMessage.style.display = "none";
+            return true;
+        }
+    </script>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="footer-title">Liên Kết</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="index.html">
+                                <img src="/IMG/logo/png-clipart-logo-house-home-house-angle-building-thumbnail.png" alt="Home" class="footer-icon"> Trang Chủ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html">
+                                <img src="/IMG/logo/istockphoto-1184670036-612x612.jpg" alt="Products" class="footer-icon"> Sản Phẩm
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news.html">
+                                <img src="/IMG/logo/pngtree-vector-news-icon-button-news-logo-vector-png-image_13830380.png" alt="News" class="footer-icon"> Tin Tức
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cart.html">
+                                <img src="/IMG/logo/90871138f577a550e0d76dc4c5a1d7df.jpg" alt="Cart" class="footer-icon"> Giỏ Hàng
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Thông Tin</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#">
+                                <img src="/IMG/logo/co-tron-tay-ngan.png" alt="About" class="footer-icon"> Giới Thiệu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Mission" class="footer-icon"> Tầm Nhìn và Sứ Mệnh
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Benefits" class="footer-icon"> Lợi Ích Khi Mua Sắm Tại Cửa Hàng
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Mạng Xã Hội</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="/IMG/logo/images.png" alt="Facebook" class="footer-icon"> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="/IMG/logo/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" alt="Instagram" class="footer-icon"> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="/IMG/logo/images (1).png" alt="Twitter" class="footer-icon"> Twitter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Google Map Section -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="footer-title">Địa Chỉ Cửa Hàng: 12 Nguyễn Văn Bảo, Phường 04, Quận Gò Vấp , Thành phố Hồ Chí Minh , Việt Nam</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.145423307556!2d106.62941141531356!3d10.776751462325732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c8c2d7f0a5d%3A0x2c1c1c1c1c1c1c1c!2sYour%20Store%20Name!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <p class="text-center">Copyright NGUYỄN HOÀNG HUY 22695451 THỜI TRANG THỂ THAO RUNAWAY.</p>
+        </div>
+    </footer>
+
+    <style>
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin: 10px 0;
+        }
+        
+        .footer-icon {
+            width: 20px;
+            height: auto;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    </style>
+
+    <script>
+        function showContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh uf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

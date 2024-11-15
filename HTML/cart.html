@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Giỏ Hàng - Cửa Hàng Thời Trang</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Thời Trang</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Tin Tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Giỏ Hàng</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Giỏ Hàng</h1>
+        <div id="cart-items" class="row">
+            <!-- Các sản phẩm trong giỏ hàng sẽ được hiển thị ở đây -->
+        </div>
+        <div class="text-right">
+            <h4>Tổng giá trị: <span id="total-price">0 VNĐ</span></h4>
+            <h4>Phương thức thanh toán:</h4>
+            <select id="payment-method" class="form-control w-50 mb-3">
+                <option value="credit-card">Thẻ tín dụng</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash-on-delivery">Thanh toán khi nhận hàng</option>
+            </select>
+            <button class="btn btn-success" id="checkout-button">Thanh Toán</button>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Thông tin liên hệ: email@example.com</span>
+        </div>
+    </footer>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="footer-title">Liên Kết</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="index.html">
+                                <img src="/IMG/logo/png-clipart-logo-house-home-house-angle-building-thumbnail.png" alt="Home" class="footer-icon"> Trang Chủ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html">
+                                <img src="/IMG/logo/istockphoto-1184670036-612x612.jpg" alt="Products" class="footer-icon"> Sản Phẩm
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news.html">
+                                <img src="/IMG/logo/pngtree-vector-news-icon-button-news-logo-vector-png-image_13830380.png" alt="News" class="footer-icon"> Tin Tức
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cart.html">
+                                <img src="/IMG/logo/90871138f577a550e0d76dc4c5a1d7df.jpg" alt="Cart" class="footer-icon"> Giỏ Hàng
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Thông Tin</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#">
+                                <img src="/IMG/logo/co-tron-tay-ngan.png" alt="About" class="footer-icon"> Giới Thiệu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Mission" class="footer-icon"> Tầm Nh ìn và Sứ Mệnh
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Benefits" class="footer-icon"> Lợi Ích Khi Mua Sắm Tại Cửa Hàng
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Mạng Xã Hội</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="/IMG/logo/images.png" alt="Facebook" class="footer-icon"> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="/IMG/logo/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" alt="Instagram" class="footer-icon"> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="/IMG/logo/images (1).png" alt="Twitter" class="footer-icon"> Twitter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Google Map Section -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="footer-title">Địa Chỉ Cửa Hàng</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.145423307556!2d106.62941141531356!3d10.776751462325732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c8c2d7f0a5d%3A0x2c1c1c1c1c1c1c1c!2sYour%20Store%20Name!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <p class="text-center">Copyright 2023 THỜ TRANG THỂ THAO RUNAWAY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin: 10px 0;
+        }
+        
+        .footer-icon {
+            width: 20px;
+            height: auto;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    </style>
+
+    <script>
+        function showContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        // JavaScript để hiển thị sản phẩm trong giỏ hàng và tính toán tổng giá trị
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="text-center">Giỏ hàng của bạn đang trống.</p>';
+            } else {
+                let total = 0;
+                cart.forEach((item, index) => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'col-md-4 mb-4';
+                    itemDiv.innerHTML = `
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.name}</h5>
+                                <p class="card-text">Giá: ${item.price} VNĐ</p>
+                                <button class="btn btn-danger" onclick="removeItem(${index})">Xóa</button>
+                            </div>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(itemDiv);
+                    total += parseInt(item.price);
+                });
+                totalPriceElement.innerText = total + ' VNĐ';
+            }
+        });
+
+        function removeItem(index) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1); // Remove the item from the cart
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update the cart in local storage
+            location.reload(); // Reload the page to reflect changes
+        }
+
+        document.getElementById('checkout-button').addEventListener('click', () => {
+            const paymentMethod = document.getElementById('payment-method').value;
+            alert(`Bạn đã chọn phương thức thanh toán: ${paymentMethod}`);
+            window.location.href = 'checkout.html'; // Chuyển đến trang thanh toán
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh uf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

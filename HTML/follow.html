@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Theo Dõi Đơn Hàng - Cửa Hàng Thời Trang</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Thời Trang</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Tin Tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Giỏ Hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="track-order.html">Theo Dõi Đơn Hàng</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Theo Dõi Đơn Hàng</h1>
+        <form id="track-order-form">
+            <div class="form-group">
+                <label for="order-id">Mã Đơn Hàng</label>
+                <input type="text" class="form-control" id="order-id" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Kiểm Tra</button>
+        </form>
+        <div id="order-status" class="mt-4"></div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Thông tin liên hệ: email@example.com</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        document.getElementById('track-order-form').addEventListener('submit', (event) => {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của form
+
+            const orderId = document.getElementById('order-id').value.trim();
+
+            // Gửi yêu cầu kiểm tra trạng thái đơn hàng
+            fetch(`https://your-api-endpoint.com/track-order/${orderId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const orderStatusDiv = document.getElementById('order-status');
+                    if (data.success) {
+                        orderStatusDiv.innerHTML = `<h5>Trạng thái đơn hàng: ${data.status}</h5>`;
+                    } else {
+                        orderStatusDiv.innerHTML = `<h5 class="text-danger">Không tìm thấy đơn hàng với mã: ${orderId}</h5>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Đã xảy ra lỗi trong quá trình kiểm tra đơn hàng. Vui lòng thử lại.');
+                });
+        });
+    </script>
+</body>
+
+</html>

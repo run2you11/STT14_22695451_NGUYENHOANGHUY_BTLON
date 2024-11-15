@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>THỜI TRANG THỂ THAO RUNAWAY - Giới Thiệu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .hero {
+            background-image: url('../IMG/background/40ebc853-a029-4644-b436-2a865deedf37__1991X760.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: backgroundMove 30s linear infinite;
+        }
+        
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+        
+        .section {
+            padding: 50px 0;
+        }
+        
+        .section-title {
+            margin-bottom: 30px;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+        
+        .content {
+            display: none;
+            /* Ẩn nội dung theo mặc định */
+        }
+        
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        
+        .footer-links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="/IMG/logo/90871138f577a550e0d76dc4c5a1d7df.jpg" alt="Logo Cửa Hàng Thể Thao">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">TRANG CHỦ </a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">SẢN PHẨM </a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">TIN TỨC</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">GIỎ HÀNG </a></li>
+                    <li class="nav-item"><a class="nav-link" href="resign.html">ĐĂNG KÝ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="checkout.html">THANH TOÁN </a></li>
+                    <li class="nav-item"><a class="nav-link" href="product-detail.html">CHI TIẾT SẢN PHẨM</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>CHÀO MỪNG ĐẾN VỚI THỜI TRANG THỂ THAO RUNAWAY ! </h1>
+        <a href="products.html" class="btn btn-light">Xem Sản Phẩm</a>
+    </div>
+
+    <!-- About Section -->
+    <div class="container section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center section-title">Giới Thiệu Về Chúng Tôi</h2>
+                <button class="btn btn-primary" onclick="showContent('about')">Xem Chi Tiết</button>
+            </div>
+            <div class="col-md-6">
+                <img src="/IMG/about-us.jpg" alt="Giới Thiệu Về Chúng Tôi" class="img-fluid">
+            </div>
+        </div>
+        <div id="about" class="content" style="display: none;">
+            <p class="text-center">Chào mừng bạn đến với RUNAWAY - nơi hội tụ những trang phục thể thao độc đáo và đậm chất thời trang, giúp bạn không chỉ tỏa sáng trên sân tập mà còn nổi bật trong phong cách sống hàng ngày. Chúng tôi tự hào là thương hiệu Việt Nam tiên phong,
+                mang đến những sản phẩm thời trang thể thao thiết kế tinh tế, chất lượng vượt trội và phù hợp với nhu cầu đa dạng của mọi người đam mê vận động. Tại RUNAWAY, chúng tôi thấu hiểu rằng thời trang thể thao không chỉ là trang phục, mà còn
+                là nguồn cảm hứng để cải thiện sức khỏe và tinh thần. Với đội ngũ thiết kế chuyên nghiệp, chúng tôi chú trọng đến từng chi tiết trong sản phẩm, từ chất liệu đến kiểu dáng, giúp bạn luôn cảm thấy thoải mái, tự tin trong mọi chuyển động.
+                Không ngừng học hỏi và phát triển, RUNAWAY hướng đến xây dựng một cộng đồng những người yêu thể thao và phong cách sống năng động. Chúng tôi tin rằng, thể thao không chỉ giúp cải thiện sức khỏe mà còn làm phong phú thêm tinh thần, mang
+                đến những phút giây tràn đầy hứng khởi. Hãy để RUNAWAY đồng hành cùng bạn trên hành trình nâng cao chất lượng cuộc sống thông qua thời trang thể thao hiện đại, phong cách và đầy cảm hứng!</p>
+        </div>
+    </div>
+
+    <!-- Vision and Mission Section -->
+    <div class="container section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center section-title">Tầm Nhìn và Sứ Mệnh</h2>
+                <button class="btn btn-primary" onclick="showContent('vision')">Xem Chi Tiết</button>
+            </div>
+            <div class="col-md-6">
+                <img src="/IMG/vision-mission.jpg" alt="Tầm Nhìn và Sứ Mệnh" class="img-fluid">
+            </div>
+        </div>
+        <div id="vision" class="content" style="display: none;">
+            <p class="text-center">Tầm Nhìn RUNAWAY mong muốn trở thành thương hiệu thời trang thể thao hàng đầu tại Việt Nam và vươn tầm khu vực, nổi bật với chất lượng và phong cách thiết kế riêng biệt. Chúng tôi hướng đến xây dựng một cộng đồng năng động, nơi mọi người cùng
+                chia sẻ niềm đam mê thể thao và lối sống khỏe mạnh. Tầm nhìn của RUNAWAY là không ngừng đổi mới để mang đến trải nghiệm thời trang thể thao kết hợp hoàn hảo giữa hiệu năng và thẩm mỹ, giúp khách hàng tự tin thể hiện cá tính của mình trong
+                mọi hoạt động, từ tập luyện đến cuộc sống thường ngày. Sứ Mệnh RUNAWAY cam kết mang đến những sản phẩm thời trang thể thao chất lượng cao, thiết kế phù hợp với mọi nhu cầu vận động, từ các bài tập đơn giản đến những môn thể thao cường
+                độ cao. Chúng tôi chú trọng vào việc sử dụng các chất liệu bền vững và thân thiện với môi trường, góp phần xây dựng một thế giới thể thao xanh và bền vững hơn. Khi mua sắm tại đây, khách hàng cũng đang góp phần vào sự phát triển xanh và
+                bảo vệ môi trường. Những lợi ích này giúp tạo nên một trải nghiệm mua sắm thân thiện, chuyên nghiệp và đáng tin cậy, giống như cách mà các thương hiệu thể thao lớn khác như Maxxsport và Reeta đã thành công trong việc xây dựng lòng tin
+                nơi khách hàng</p>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="container section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center section-title">Lợi Ích Khi Mua Sắm Tại Cửa Hàng RUNAWAY Sản Phẩm Độc Đáo và Chất Lượng Cao</h2>
+                <button class="btn btn-primary" onclick="showContent('benefits')">Xem Chi Tiết</button>
+            </div>
+            <div class="col-md-6">
+                <img src="/IMG/benefits.jpg" alt="Lợi Ích Khi Mua Sắm Tại Cửa Hàng RUNAWAY" class="img-fluid">
+            </div>
+        </div>
+        <div id="benefits" class="content" style="display: none;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Sản Phẩm Chất Lượng Cao</h5>
+                            <p class="card-text">Sản Phẩm Chất Lượng Cao của RUNAWAY Tại RUNAWAY, chất lượng luôn là yếu tố tiên quyết trong quá trình sản xuất và cung cấp sản phẩm. Chúng tôi cam kết mang đến cho khách hàng những sản phẩm không chỉ thời trang mà còn đáp ứng
+                                các tiêu chuẩn về độ bền, tính năng, và khả năng thích ứng cao với nhiều loại hình thể thao. Chất Liệu Cao Cấp và Thân Thiện với Da RUNAWAY lựa chọn các chất liệu vải cao cấp như polyester, spandex, và cotton organic, đảm
+                                bảo độ bền và sự co giãn tối ưu, đồng thời thân thiện với da người sử dụng. Các chất liệu này giúp duy trì sự thoải mái trong suốt quá trình tập luyện mà vẫn đảm bảo độ thoáng mát và thoát mồ hôi nhanh. Ứng Dụng Công Nghệ
+                                Hiện Đại Để đáp ứng nhu cầu vận động cao của người dùng, các sản phẩm của RUNAWAY được sản xuất dựa trên công nghệ tiên tiến như công nghệ chống thấm, kháng khuẩn, và chống tia UV. Điều này đảm bảo rằng trang phục giữ được
+                                form dáng và màu sắc lâu dài, đồng thời bảo vệ da khỏi tác hại của ánh nắng mặt trời. Thiết Kế Phong Cách và Tỉ Mỉ RUNAWAY chú trọng vào từng chi tiết thiết kế, đảm bảo tính thẩm mỹ cao nhưng vẫn ưu tiên tính năng tiện
+                                dụng cho người dùng. Các sản phẩm được thiết kế theo xu hướng hiện đại, đa dạng về màu sắc và kiểu dáng, phù hợp với mọi phong cách và sở thích của khách hàng, từ năng động, thể thao đến thời trang hàng ngày. Quy Trình
+                                Sản Xuất Kiểm Định Chặt Chẽ Mỗi sản phẩm của RUNAWAY đều trải qua quy trình kiểm định chất lượng nghiêm ngặt trước khi đến tay khách hàng. Chúng tôi áp dụng các tiêu chuẩn quốc tế trong sản xuất nhằm đảm bảo độ bền và tính
+                                năng của sản phẩm ngay cả khi sử dụng trong điều kiện tập luyện khắc nghiệt. Những yếu tố này đã giúp RUNAWAY xây dựng lòng tin từ khách hàng và khẳng định vị thế trong thị trường thời trang thể thao. Hãy đến và trải nghiệm
+                                sự khác biệt với các sản phẩm chất lượng cao, mang phong cách hiện đại và tính năng ưu việt của RUNAWAY!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Gi á Cả Hợp Lý</h5>
+                            <p class="card-text">RUNAWAY cam kết mang đến cho khách hàng không chỉ là sản phẩm thời trang thể thao chất lượng cao mà còn là mức giá hợp lý, giúp bạn dễ dàng sở hữu trang phục đáp ứng mọi nhu cầu vận động mà không phải băn khoăn về giá cả. Chúng
+                                tôi tối ưu hóa chi phí qua từng giai đoạn, từ khâu chọn nguyên vật liệu đến sản xuất và phân phối, nhằm đảm bảo rằng mỗi sản phẩm đến tay khách hàng đều có giá trị tương xứng. Đa Dạng Phân Khúc Giá RUNAWAY cung cấp các
+                                sản phẩm từ cơ bản đến cao cấp, với mức giá đa dạng, phù hợp với túi tiền của nhiều đối tượng khách hàng. Từ những bộ trang phục thể thao đơn giản cho đến các sản phẩm chuyên dụng hơn, RUNAWAY đều đưa ra mức giá cạnh tranh,
+                                giúp bạn dễ dàng chọn lựa. Giá Cả Đi Đôi Với Chất Lượng Mỗi sản phẩm của RUNAWAY đều được chế tạo với chất liệu bền bỉ, ứng dụng công nghệ tiên tiến và thiết kế tối ưu, nhưng vẫn giữ giá ở mức phải chăng. Điều này đảm bảo
+                                rằng bạn không chỉ mua sản phẩm mà còn đầu tư vào trải nghiệm thoải mái, phong cách và lâu dài. Khuyến Mại và Chương Trình Giảm Giá RUNAWAY thường xuyên có các chương trình khuyến mãi đặc biệt, giảm giá cho khách hàng thân
+                                thiết và các dịp lễ lớn, mang đến nhiều cơ hội mua sắm với chi phí tiết kiệm hơn. Chúng tôi cũng có các gói ưu đãi dành riêng cho những khách hàng mua sắm thường xuyên, giúp bạn nhận được nhiều giá trị hơn trong mỗi lần
+                                giao dịch. Mua Sắm Tiện Lợi, Tiết Kiệm Thời Gian Với hệ thống cửa hàng và nền tảng mua sắm trực tuyến thân thiện, bạn có thể dễ dàng lựa chọn sản phẩm phù hợp mà không cần phải chi thêm chi phí di chuyển. Đây là một giải
+                                pháp tiết kiệm hiệu quả cho những khách hàng bận rộn mà vẫn muốn trải nghiệm chất lượng sản phẩm của RUNAWAY. Nhờ vào chiến lược giá cạnh tranh và dịch vụ chất lượng, RUNAWAY giúp mọi khách hàng đều có cơ hội tiếp cận thời
+                                trang thể thao cao cấp mà không phải chi tiêu quá mức.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Trải Nghiệm Mua Sắm Tuyệt Vời</h5>
+                            <p class="card-text">RUNAWAY mang đến cho bạn một hành trình mua sắm hoàn hảo với không gian trưng bày tinh tế và đội ngũ nhân viên nhiệt tình, giúp mỗi khách hàng cảm thấy như được “đặt riêng” từng sản phẩm. Không Gian Thân Thiện và Hiện Đại Cửa
+                                hàng RUNAWAY được thiết kế với không gian thoáng đãng, bố trí sản phẩm khoa học, giúp bạn dễ dàng tìm kiếm và lựa chọn theo sở thích. Các góc trưng bày phong cách và chuyên nghiệp không chỉ tôn lên vẻ đẹp của sản phẩm mà
+                                còn mang lại cảm giác thoải mái cho người mua. Trải Nghiệm Dịch Vụ Chăm Sóc Khách Hàng Chu Đáo Nhân viên tại RUNAWAY luôn thân thiện, sẵn sàng hỗ trợ bạn với những gợi ý phù hợp, giúp bạn tìm ra trang phục hoàn hảo cho
+                                nhu cầu và phong cách cá nhân. Đội ngũ chăm sóc khách hàng cũng cam kết hỗ trợ tận tình sau khi mua, với chính sách đổi trả linh hoạt và bảo hành sản phẩm. Hệ Thống Mua Sắm Trực Tuyến Tiện Lợi RUNAWAY không chỉ có cửa hàng
+                                trực tiếp mà còn phát triển hệ thống mua sắm trực tuyến dễ dàng và tiện lợi, cho phép bạn lựa chọn sản phẩm mọi lúc, mọi nơi. Trang web của chúng tôi được thiết kế thân thiện với người dùng, giúp bạn tìm kiếm sản phẩm nhanh
+                                chóng và dễ dàng thực hiện các giao dịch trực tuyến an toàn. Chính Sách Khách Hàng Thân Thiết và Ưu Đãi Đặc Biệt Khách hàng thân thiết của RUNAWAY sẽ được tích điểm, nhận quà tặng và hưởng các chương trình ưu đãi độc quyền,
+                                giúp bạn cảm nhận sự gắn bó và lợi ích của mỗi lần mua sắm. Những khách hàng quay lại thường xuyên sẽ nhận được các phần quà đặc biệt, như lời tri ân từ RUNAWAY vì đã luôn tin tưởng và đồng hành cùng thương hiệu. Cam Kết
+                                Mua Sắm Không Rủi Ro Tại RUNAWAY, sự hài lòng của khách hàng là ưu tiên hàng đầu. Chính sách đổi trả linh hoạt và dịch vụ bảo hành giúp bạn an tâm khi lựa chọn sản phẩm. Chúng tôi luôn sẵn sàng lắng nghe phản hồi và cam
+                                kết hỗ trợ bạn một cách tốt nhất, đảm bảo bạn có trải nghiệm mua sắm không chỉ tuyệt vời mà còn hoàn toàn yên tâm. Trải nghiệm mua sắm tại RUNAWAY là sự kết hợp của dịch vụ chuyên nghiệp, không gian hiện đại và sản phẩm
+                                chất lượng, hứa hẹn mang đến cho bạn niềm vui và sự hài lòng trong mỗi lần ghé thăm.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container section">
+        <h2 class="text-center section-title">Liên Hệ</h2>
+        <p class="text-center">Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với chúng tôi qua địa chỉ email hoặc số điện thoại dưới đây.</p>
+        <p class="text-center">Email: [run2you11@gmail.com]( run2you11@example.com)</p>
+        <p class="text-center">Số Điện Thoại: 0123456789</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="footer-title">Liên Kết</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="index.html">
+                                <img src="/IMG/logo/png-clipart-logo-house-home-house-angle-building-thumbnail.png" alt="Home" class="footer-icon"> Trang Chủ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html">
+                                <img src="/IMG/logo/istockphoto-1184670036-612x612.jpg" alt="Products" class="footer-icon"> Sản Phẩm
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news.html">
+                                <img src="/IMG/logo/pngtree-vector-news-icon-button-news-logo-vector-png-image_13830380.png" alt="News" class="footer-icon"> Tin Tức
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cart.html">
+                                <img src="/IMG/logo/90871138f577a550e0d76dc4c5a1d7df.jpg" alt="Cart" class="footer-icon"> Giỏ Hàng
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Thông Tin</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#">
+                                <img src="/IMG/logo/co-tron-tay-ngan.png" alt="About" class="footer-icon"> Giới Thiệu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Mission" class="footer-icon"> Tầm Nhìn và Sứ Mệnh
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/IMG/logo/co-tron-tay-ngan.png" alt="Benefits" class="footer-icon"> Lợi Ích Khi Mua Sắm Tại Cửa Hàng
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Mạng Xã Hội</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="/IMG/logo/images.png" alt="Facebook" class="footer-icon"> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="/IMG/logo/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" alt="Instagram" class="footer-icon"> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="/IMG/logo/images (1).png" alt="Twitter" class="footer-icon"> Twitter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Google Map Section -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="footer-title">Địa Chỉ Cửa Hàng: 12 Nguyễn Văn Bảo, Phường 04, Quận Gò Vấp , Thành phố Hồ Chí Minh , Việt Nam</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.145423307556!2d106.62941141531356!3d10.776751462325732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c8c2d7f0a5d%3A0x2c1c1c1c1c1c1c1c!2sYour%20Store%20Name!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <p class="text-center">Copyright NGUYỄN HOÀNG HUY 22695451 THỜI TRANG THỂ THAO RUNAWAY.</p>
+        </div>
+    </footer>
+
+    <style>
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin: 10px 0;
+        }
+        
+        .footer-icon {
+            width: 20px;
+            height: auto;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    </style>
+
+    <script>
+        function showContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh uf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
